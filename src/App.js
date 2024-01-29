@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import LayoutMain from "./Layout/LayoutMain.jsx";
+import TabProjects from "./components/TabProjects/TabProjects";
+import TabUser from "./components/TabUsers/TabUsers.jsx";
+import ProjectDetail from "./components/ProjectDetail/ProjectDetail.jsx";
+import NewProject from "./components/NewProject/NewProject.jsx";
+import TabUserSetting from "./components/TabUserSetting/TabUserSetting.jsx";
+import Register from "./pages/LoginPage/Register.jsx";
+import LoginPage from "./pages/LoginPage/LoginPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="jira">
+      <BrowserRouter>
+        <Routes>
+          <Route element={<LayoutMain />}>
+            <Route path="/" element={<TabProjects />}></Route>
+            <Route path="/users" element={<TabUser />}></Route>
+            <Route  
+              path="/projectdetail/:id"
+              element={<ProjectDetail />}
+            ></Route>
+            <Route path="/newproject" element={<NewProject />}></Route>
+            <Route path="/usersetting" element={<TabUserSetting />}></Route>
+          </Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="*" element={<NotFoundPage/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
