@@ -54,12 +54,13 @@ function Register() {
     <Form.Item name="prefix" noStyle>
       <Select
         style={{
-          width: 70,
+          width: 190,
         }}
         defaultValue="86"
       >
         <Option value="86">+86</Option>
         <Option value="87">+87</Option>
+        <Option value="87">+89</Option>
       </Select>
     </Form.Item>
   );

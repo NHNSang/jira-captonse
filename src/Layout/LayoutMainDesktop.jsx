@@ -13,7 +13,7 @@ import {
   UnorderedListOutlined,
 } from "@ant-design/icons";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
-import LoginPage from "../pages/LoginPage/LoginPage.jsx";
+import LoginPageTest from "../pages/LoginPage/LoginPageTest.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjectData } from "../redux/action/project.js";
 import {
@@ -230,7 +230,7 @@ export default function LayoutMainDesktop() {
         </Layout>
       ) : (
         <div>
-          <LoginPage />
+          <LoginPageTest />
         </div>
       )}
     </>

@@ -18,7 +18,6 @@ export default function LoginPage() {
     console.log("values", values);
     //let onSuccess = () => (window.location.href = "/");
 
-
     let onSuccess = () => (window.location.href = "/");
     dispatch(loginAction(values, onSuccess));
 
