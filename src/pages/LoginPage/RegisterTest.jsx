@@ -1,7 +1,7 @@
 
 import * as registerAnimation from "./../../assets/animation/registerAnimation.json";
 import Lottie from 'react-lottie';
-
+import registerTest from "./registerTest.css"
 import {
     Alert,
     Button,
@@ -92,12 +92,12 @@ import {
     return (
       <div>
        <div className="min-w-screen min-h-screen bg-white flex items-center justify-center px-5 py-5">
-  <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style={{maxWidth: 1000}}>
+  <div className=" css bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style={{maxWidth: 1000}}>
     <div className="md:flex w-full">
-      <div className="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
-        <Lottie options={defaultOptions} height={400} width={400} />
+      <div className=" animation-register hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+        <Lottie className="hello" options={defaultOptions} height={400} width={400} />
       </div>
-      <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
+      <div className="form-register w-full md:w-1/2 py-10 px-5 md:px-10">
       <div>
       <div className="register container">
         <div className="flex flex-col justify-center items-center ">
@@ -228,6 +228,7 @@ import {
                 placeholder="Email"
                 />
               </Form.Item>
+
                   {/* phone */}
               <Form.Item
                 // name="phone"
@@ -241,6 +242,7 @@ import {
               >
                 <Input
                   addonBefore={prefixSelector}
+                  className="phone"
                   style={{
                     height: "40px",
                 }}
@@ -249,11 +251,11 @@ import {
                 />
               </Form.Item>
 
-              <Form.Item className="w-full flex justify-center items-center">
+              <Form.Item className="nut w-full flex justify-center items-center">
                 <>
                     <Button htmlType="reset" danger 
                     style={{ width: "80px"}}
-                    className="px-3 mx-3 lg:px-7">
+                    className="clear-button px-3 mx-3 lg:px-7">
                         Clear
                     </Button>
 
@@ -261,7 +263,7 @@ import {
                     type="text"
                     htmlType="submit"
                     style={{ backgroundColor: "#1890ff" ,width: "80px"}}
-                    className="px-3 mx-3 lg:px-7 btnBlue"
+                    className=" register-button px-3 mx-3 lg:px-7 btnBlue"
                   >
                     Register
                   </Button>
