@@ -1,3 +1,4 @@
+import  "./loginPageTest.css"
 import React from "react";
 import {
   FacebookFilled,
@@ -32,7 +33,7 @@ export default function LoginPage() {
     <div>
       <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            <h2 className=" hello mt-6 text-center text-3xl font-extrabold text-gray-900">
                 Sign in to your account
             </h2>
             <div className="text-center ">
@@ -77,7 +78,7 @@ export default function LoginPage() {
                   width: "400px",
                   height: "50px",
                 }}
-                prefix={<MailOutlined className="site-form-item-icon" />}
+                prefix={<MailOutlined className=" site-form-item-icon" />}
                 placeholder="Email"
               />
             </Form.Item>
