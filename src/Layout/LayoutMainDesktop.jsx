@@ -148,17 +148,11 @@ export default function LayoutMainDesktop() {
             </div>
            
               <Menu
-              // style={{position:"fixed"}}
-                // defaultSelectedKeys={["1"]}
                 selectedKeys={location.pathname}
                 defaultSelectedKeys={location.pathname}
                 theme="dark"
                 mode="inline"
                 items={items}
-                // onClick={({key})=>{
-                //   navigate(key)
-
-                // }}
               />
           
           </Sider>
@@ -196,7 +190,7 @@ export default function LayoutMainDesktop() {
                   className="mx-3 my-3 "
                   style={{ fontSize: "12px", color: "black",fontWeight:"400" }}
                 >
-                  {curUser ? curUser.name.slice(0, 2).toUpperCase() : USER?.name?.slice(0, 2).toUpperCase()  }
+                  {curUser ? curUser.name.slice(0, 2).toUpperCase() : USER?.name?.slice(0, 2).toUpperCase() }
                 </Avatar>
                 <NavLink to="/login" onClick={handleLogout}>
                   <LogoutOutlined  style={{ fontSize: '20px', color: "red" }}/>
@@ -212,19 +206,9 @@ export default function LayoutMainDesktop() {
                 backgroundColor: "#fff",
                 // padding: "30px 15px",
                 borderRadius: "10px",
-                
             }}
             >
-              {/* <div
-                style={{
-                  // overflow: 'scroll',
-                  backgroundColor: "#fff",
-                  padding: "30px 15px",
-                  borderRadius: "10px",
-                }}
-              > */}
                 <Outlet />
-              {/* </div> */}
             </Content>
           </Layout>
         </Layout>

@@ -13,17 +13,15 @@ import { useDispatch } from "react-redux";
 import { loginAction, setInfoAction } from "../../redux/action/user";
 import { FacebookOutlined, TwitterOutlined, GoogleOutlined } from '@ant-design/icons';
 export default function LoginPage() {
+
+  console.log("object")
+
   let navigate = useNavigate();
   let dispatch = useDispatch();
   const onFinish = (values) => {
-    // dispatch(setInfoAction(values));
     console.log("values", values);
-    //let onSuccess = () => (window.location.href = "/");
-
     let onSuccess = () => (window.location.href = "/");
     dispatch(loginAction(values, onSuccess));
-
-    
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

@@ -26,6 +26,7 @@ import {
 } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjectData } from "../../redux/action/project";
+import { https } from "../../services/config";
 
 const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
@@ -65,7 +66,6 @@ export default function TabProjectsDesktop() {
     projectService
       .getProjectList()
       .then((result) => {
-        // console.log("chay updatae");
       
          dispatch(setProjectData(result.data.content));
 

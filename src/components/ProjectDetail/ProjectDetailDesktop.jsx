@@ -41,9 +41,6 @@ import {
 } from "@ant-design/icons";
 
 const { TextArea } = Input;
-// const onChange = (e) => {
-//   console.log("Change:", e.target.value);
-// };
 const { Option } = Select;
 
 const data = [
